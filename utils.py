@@ -1,5 +1,6 @@
 import numpy as np
 from PIL import Image
+from io import BytesIO
 
 
 def get_coordinates(arr: np.array) -> tuple:
@@ -37,3 +38,9 @@ def get_coordinates(arr: np.array) -> tuple:
 def crop(img: Image) -> Image:
     arr = np.array(img)
     return img.crop(get_coordinates(arr))
+
+
+def prepare_to_save(img):
+    buf = BytesIO()
+    img.save(buf, format="PNG")
+    return buf.getvalue()

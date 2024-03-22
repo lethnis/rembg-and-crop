@@ -17,3 +17,17 @@
 </table>
 
 [Источник изображения](https://pixabay.com/photos/cat-alley-cat-european-cat-animal-8578562/)
+
+# Использование
+
+Создать копию репозитория любым удобным способом, например:  
+`git clone https://github.com/lethnis/rembg-and-crop.git`  
+
+Создать виртуальную среду (использовался `python 3.11.8`)  
+`python -m venv .venv`  
+
+Установить зависимости  
+`pip install -r requirements.txt`  
+
+Запустить программу  
+`streamlit run main.py`
